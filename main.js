@@ -65,7 +65,7 @@ swagger.setAuthorizations({
 
 
 swagger.configureSwaggerPaths("", "api-docs", "")
-swagger.configure("http://localhost:9999", "1.0.0");
+swagger.configure("http://localhost:9999", "1.1.0");
 
 var docs_handler = express.static(__dirname + '/swagger-ui/');
 app.get(/^\/docs(\/.*)?$/, function(req, res, next) {
@@ -79,6 +79,6 @@ app.get(/^\/docs(\/.*)?$/, function(req, res, next) {
 	return docs_handler(req, res, next);
 });
 
-app.listen(9997);
+app.listen(9996);
 
 
